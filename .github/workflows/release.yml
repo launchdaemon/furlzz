@@ -39,6 +39,14 @@ jobs:
           version: ${{ matrix.frida_version }}
           outdir: /tmp/data/macos_arm64
       -
+        name: Download Frida linux_amd64
+        uses: ./.github/actions/install-frida-devkit
+        with:
+          arch: x86_64
+          os: linux
+          version: ${{ matrix.frida_version }}
+          outdir: /tmp/data/linux_amd64
+      -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v4
         with:
