@@ -24,4 +24,4 @@ runs:
         cp frida-core.h ${{ inputs.outdir }}/include
         cp libfrida-core.* ${{ inputs.outdir }}/lib
         rm -rf /tmp/frida-core-devkit
-      shell: bash
+       shell: bash
